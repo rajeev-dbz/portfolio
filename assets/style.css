@@ -12,3 +12,16 @@
 .project-cover-wrap{position:relative}.project-image-actions{position:absolute;top:14px;right:14px;display:flex;gap:6px;z-index:1}.project-image-actions button{background:#fffffff2;border:1px solid #d9e2e9;border-radius:5px;padding:8px 10px;font-size:10px;font-weight:600;box-shadow:0 2px 8px #172d4010;color:#29475d}.project-image-actions button:hover{background:#e8f0f6}.project-cover-wrap .cover-label{max-width:calc(100% - 185px);white-space:normal}.project-manage-links{display:flex;flex-direction:column;align-items:flex-end;gap:10px}.published-project-link{font-size:10px;color:var(--accent)}.project-preview-dialog{width:min(1050px,calc(100% - 28px));padding:32px}.project-preview-dialog .project-detail h1{font-size:36px;margin-top:20px}.project-preview-dialog .modal-header>div{max-width:85%}html[data-theme=dark] .project-image-actions button{background:#203748f2;border-color:#466176;color:#d9e8f4}html[data-theme=dark] .project-image-actions button:hover{background:#314e63}@media(max-width:760px){.project-image-actions{top:12px;right:10px}.project-image-actions button{font-size:9px;padding:7px}.project-cover-wrap .cover-label{max-width:calc(100% - 150px);font-size:7px}.project-preview-dialog{padding:20px}.project-preview-dialog .project-detail h1{font-size:28px}}
 
 .project-image-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}.project-image-grid figure{margin:0;border:1px solid var(--line);border-radius:8px;overflow:hidden}.project-image-grid a{display:block;background:white}.project-image-grid img{display:block;width:100%;height:auto;object-fit:contain}.project-image-grid figcaption{padding:16px;font-size:13px;line-height:1.7;color:var(--ink)}@media(max-width:760px){.project-image-grid{grid-template-columns:1fr}}
+
+/* Keep cover-image letterboxing white in both themes. */
+html .project-card .cover:has(img),html[data-theme=dark] .project-card .cover:has(img),html .detail-cover,html[data-theme=dark] .detail-cover{background:#fff}
+html .project-card .cover-label,html[data-theme=dark] .project-card .cover-label{background:#edf4dd;color:#35501c;border:1px solid #b8cc8c;box-shadow:0 2px 6px #10212c12}
+html .project-image-actions button,html[data-theme=dark] .project-image-actions button{background:#203b50;color:#fff;border-color:#446176}
+html .project-image-actions button:hover,html[data-theme=dark] .project-image-actions button:hover{background:#31556e}
+
+.project-image-grid figcaption strong{display:block;margin-bottom:12px;font-size:16px}.project-image-grid figcaption p{margin:0;font-size:14px;line-height:1.85;color:var(--ink)}
+
+/* Align project actions at the bottom regardless of title or summary length. */
+.project-card{display:flex;flex-direction:column}.project-card>.cover,.project-card>.project-cover-wrap{flex-shrink:0}.project-card .card-body{display:flex;flex-direction:column;flex:1}.project-card .card-body>.tools{margin-bottom:22px}.project-card .card-footer{margin-top:auto}
+
+.project-back{display:inline-flex;margin-bottom:25px;align-items:center;gap:8px}
