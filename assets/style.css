@@ -27,3 +27,6 @@ html .project-image-actions button:hover,html[data-theme=dark] .project-image-ac
 .project-back{display:inline-flex;margin-bottom:25px;align-items:center;gap:8px}
 
 .selection-link-builder{border:1px solid var(--line);border-radius:8px;padding:22px;margin:28px 0}.selection-link-builder>p{font-size:12px;color:var(--muted)}.selection-link-builder .public-url{overflow-wrap:anywhere}
+
+/* Keep tool badges aligned above the shared card footer. */
+.project-card .card-body>.tools{margin-top:auto;margin-bottom:22px;min-height:68px;align-content:flex-start}.project-card .card-body>p{margin-bottom:22px}.project-card .card-footer{margin-top:0}
