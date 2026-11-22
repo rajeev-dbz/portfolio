@@ -53,7 +53,7 @@ html[data-theme=dark] .project-grid .project-card .card-footer{border-top-color:
 /* Formula and cover explanations for evidence-rich simulation pages. */
 .detail-cover-figure{margin:0 0 2rem}.detail-cover-figure .detail-cover{margin-bottom:.75rem}.detail-cover-figure figcaption{font-size:1rem;line-height:1.65}.detail-cover-figure figcaption p{margin:.4rem 0;color:var(--muted)}.formula-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.formula-block{border:1px solid var(--line);border-radius:12px;padding:1.2rem;background:var(--bg);min-width:0}.formula-block h3{font-size:1.05rem;margin:0 0 .8rem}.formula-block p{font-size:1rem;line-height:1.65;overflow-wrap:anywhere}.formula-expression{padding:.8rem;border-left:3px solid var(--accent);background:var(--bg)}.formula-expression code{font:inherit;font-family:Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere}.formula-result{color:var(--ink)}.formula-block small{font-size:.875rem;color:var(--muted)}@media(max-width:760px){.formula-grid{grid-template-columns:1fr}.formula-block{padding:1rem}}
 
-.image-formula{margin-top:1rem;padding:.9rem;border-left:3px solid var(--accent);background:var(--bg);overflow-wrap:anywhere}.image-formula>strong{display:block;font-size:.875rem;margin-bottom:.5rem;color:var(--ink)}.image-formula code{display:block;font-size:1rem;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--ink)}.image-formula p{font-size:.95rem!important;line-height:1.65;margin:.65rem 0 0}
+.image-formula{margin-top:1rem;padding:.9rem;border-left:3px solid var(--accent);background:var(--bg);overflow-wrap:anywhere}.image-formula>strong{display:block;font-size:.875rem;margin-bottom:.5rem;color:var(--ink)}.image-formula code{display:block;font-size:1rem;line-height:1.7;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--ink)}.image-formula p{font-size:14px!important;line-height:1.65;margin:.65rem 0 0}
 
 /* Multi-panel plots use the full gallery row; single plots can share a row. */
 .project-image-grid figure.plot-wide{grid-column:1/-1}.project-image-grid figure.plot-wide img{width:100%;height:auto;object-fit:contain}
@@ -72,3 +72,34 @@ main.project-detail>h1,.project-detail>.review-intro{max-width:none}
 .project-card .cover:has(img) img{padding-top:44px;box-sizing:border-box}.page-toc{margin:4px 0 8px;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}.page-toc>strong{display:block;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}.toc-links{display:flex;flex-wrap:wrap;gap:6px}.toc-link{font:inherit;font-size:.85rem;padding:5px 10px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--ink);cursor:pointer}.toc-link:hover{border-color:var(--accent);color:var(--accent)}.toc-link.toc-sub{font-size:.8rem;color:var(--muted)}[id^=toc-]{scroll-margin-top:18px}.skills-line{margin:-18px 0 22px;color:var(--ink);font-size:15px;line-height:1.6;text-align:left!important;hyphens:manual!important}.skills-line strong{color:var(--ink)}
 .tools-only .tool-roles{margin-top:0}
 .evidence-toggle{display:inline-flex;align-items:center;gap:5px;font-size:12px;color:var(--muted);white-space:nowrap;cursor:pointer}.evidence-toggle input,.evidence-section-toggle input{accent-color:var(--accent)}.evidence-section-toggle{display:inline-flex;align-items:center;gap:6px;font-size:13px;color:var(--ink);margin-right:10px;cursor:pointer}
+
+/* Consistent type scale for project detail pages (applicant request 22.11.2026):
+   headings 41/28/22, main text 16, secondary 14, labels 13, badges 12; nothing below 12 px. */
+main.project-detail h2{font-size:28px}
+main.project-detail .image-section-head h3{font-size:22px}
+main.project-detail p.story,main.project-detail section>p,main.project-detail .image-section-head p{font-size:16px;line-height:1.7}
+main.project-detail figcaption strong{font-size:16px}
+main.project-detail figcaption p,main.project-detail .detail-cover-figure figcaption p{font-size:16px}
+main.project-detail .image-formula>strong{font-size:14px}
+main.project-detail .image-formula code{font-size:16px}
+main.project-detail .image-formula p{font-size:14px}
+main.project-detail .comparison-block h3{font-size:18px}
+main.project-detail .comparison-explanation{font-size:16px}
+main.project-detail .comparison-context,main.project-detail .comparison-insight{font-size:14px}
+main.project-detail .comparison-block th[scope=col]{font-size:13px}
+main.project-detail .comparison-block td,main.project-detail .comparison-block th[scope=row]{font-size:14px}
+main.project-detail .comparison-source,main.project-detail .comparison-block th[scope=row] small{font-size:13px}
+main.project-detail .highlights span{font-size:13px}
+main.project-detail .highlights small{font-size:14px}
+main.project-detail .formula-block h3{font-size:17px}
+main.project-detail .formula-block p,main.project-detail .formula-block .formula-result{font-size:16px}
+main.project-detail .formula-block small{font-size:13px}
+main.project-detail .tool-role strong{font-size:16px}
+main.project-detail .tool-role span{font-size:16px}
+main.project-detail .tool-functions li{font-size:14px}
+main.project-detail li{font-size:16px}
+main.project-detail .tool-functions li{font-size:14px}
+main.project-detail .toc-link{font-size:14px}
+main.project-detail .toc-link.toc-sub{font-size:13px}
+main.project-detail .skills-line{font-size:16px}
+.tool{font-size:12px}
