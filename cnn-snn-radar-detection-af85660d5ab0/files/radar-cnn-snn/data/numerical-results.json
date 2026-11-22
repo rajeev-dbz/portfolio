@@ -1,0 +1,996 @@
+{
+  "dataset_splits": {
+    "train": {
+      "base_scenes": 3500,
+      "maps": 10500,
+      "positive_cells": 21216
+    },
+    "validation": {
+      "base_scenes": 750,
+      "maps": 2250,
+      "positive_cells": 4509
+    },
+    "test": {
+      "base_scenes": 750,
+      "maps": 2250,
+      "positive_cells": 4446
+    }
+  },
+  "training": {
+    "cnn_baseline_50epochs_01": {
+      "best_epoch": 42,
+      "best_validation_loss": 0.8847078981929355,
+      "completed_epochs": 50,
+      "elapsed_s": 238.91778417800379,
+      "parameter_count": 673
+    },
+    "cnn_leaky_50epochs_01": {
+      "best_epoch": 49,
+      "best_validation_loss": 0.9016333287556966,
+      "completed_epochs": 50,
+      "elapsed_s": 246.45908470999711,
+      "parameter_count": 673
+    },
+    "snn_rate_50epochs_01": {
+      "best_epoch": 42,
+      "best_validation_loss": 1.0528283060921564,
+      "completed_epochs": 50,
+      "elapsed_s": 8615.414912017,
+      "parameter_count": 673
+    },
+    "snn_latency_50epochs_01": {
+      "best_epoch": 46,
+      "best_validation_loss": 0.9172306835386488,
+      "completed_epochs": 50,
+      "elapsed_s": 8467.308614036001,
+      "parameter_count": 673
+    }
+  },
+  "validation": {
+    "cnn_baseline_50epochs_01": {
+      "calibration": {
+        "threshold": 4.68595027923584,
+        "negative_cells": 115195491,
+        "allowed_fp": 1151,
+        "observed_fp": 0,
+        "fpr": 0.0
+      },
+      "pooled": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 115195491,
+        "fn": 4509,
+        "tpr": 0.0,
+        "fpr": 0.0
+      },
+      "by_snr": {
+        "0.0": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 38398497,
+          "fn": 1503,
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        "5.0": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 38398497,
+          "fn": 1503,
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        "10.0": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 38398497,
+          "fn": 1503,
+          "tpr": 0.0,
+          "fpr": 0.0
+        }
+      }
+    },
+    "cnn_leaky_50epochs_01": {
+      "calibration": {
+        "threshold": 6.809140682220459,
+        "negative_cells": 115195491,
+        "allowed_fp": 1151,
+        "observed_fp": 1151,
+        "fpr": 9.991710526239261e-06
+      },
+      "pooled": {
+        "tp": 296,
+        "fp": 1151,
+        "tn": 115194340,
+        "fn": 4213,
+        "tpr": 0.06564648480816146,
+        "fpr": 9.991710526239261e-06
+      },
+      "by_snr": {
+        "0.0": {
+          "tp": 33,
+          "fp": 50,
+          "tn": 38398447,
+          "fn": 1470,
+          "tpr": 0.021956087824351298,
+          "fpr": 1.3021342996836568e-06
+        },
+        "5.0": {
+          "tp": 91,
+          "fp": 264,
+          "tn": 38398233,
+          "fn": 1412,
+          "tpr": 0.06054557551563539,
+          "fpr": 6.875269102329708e-06
+        },
+        "10.0": {
+          "tp": 172,
+          "fp": 837,
+          "tn": 38397660,
+          "fn": 1331,
+          "tpr": 0.11443779108449767,
+          "fpr": 2.1797728176704415e-05
+        }
+      }
+    },
+    "snn_rate_50epochs_01": {
+      "calibration": {
+        "threshold": 3.8061423301696777,
+        "negative_cells": 115195491,
+        "allowed_fp": 1151,
+        "observed_fp": 1151,
+        "fpr": 9.991710526239261e-06
+      },
+      "pooled": {
+        "tp": 519,
+        "fp": 1151,
+        "tn": 115194340,
+        "fn": 3990,
+        "tpr": 0.11510312707917499,
+        "fpr": 9.991710526239261e-06
+      },
+      "by_snr": {
+        "0.0": {
+          "tp": 88,
+          "fp": 123,
+          "tn": 38398374,
+          "fn": 1415,
+          "tpr": 0.05854956753160346,
+          "fpr": 3.2032503772217958e-06
+        },
+        "5.0": {
+          "tp": 157,
+          "fp": 298,
+          "tn": 38398199,
+          "fn": 1346,
+          "tpr": 0.10445775116433799,
+          "fpr": 7.760720426114595e-06
+        },
+        "10.0": {
+          "tp": 274,
+          "fp": 730,
+          "tn": 38397767,
+          "fn": 1229,
+          "tpr": 0.1823020625415835,
+          "fpr": 1.901116077538139e-05
+        }
+      }
+    },
+    "snn_latency_50epochs_01": {
+      "calibration": {
+        "threshold": 4.975198745727539,
+        "negative_cells": 115195491,
+        "allowed_fp": 1151,
+        "observed_fp": 1149,
+        "fpr": 9.974348735576811e-06
+      },
+      "pooled": {
+        "tp": 811,
+        "fp": 1149,
+        "tn": 115194342,
+        "fn": 3698,
+        "tpr": 0.17986249722776668,
+        "fpr": 9.974348735576811e-06
+      },
+      "by_snr": {
+        "0.0": {
+          "tp": 154,
+          "fp": 119,
+          "tn": 38398378,
+          "fn": 1349,
+          "tpr": 0.10246174318030606,
+          "fpr": 3.0990796332471035e-06
+        },
+        "5.0": {
+          "tp": 256,
+          "fp": 298,
+          "tn": 38398199,
+          "fn": 1247,
+          "tpr": 0.1703260146373919,
+          "fpr": 7.760720426114595e-06
+        },
+        "10.0": {
+          "tp": 401,
+          "fp": 732,
+          "tn": 38397765,
+          "fn": 1102,
+          "tpr": 0.26679973386560213,
+          "fpr": 1.9063246147368737e-05
+        }
+      }
+    }
+  },
+  "primary_test": {
+    "cnn_baseline_50epochs_01": {
+      "threshold": 4.68595027923584,
+      "pooled": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 115195554,
+        "fn": 4446,
+        "tpr": 0.0,
+        "fpr": 0.0
+      },
+      "by_snr": {
+        "0.0": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 38398518,
+          "fn": 1482,
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        "5.0": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 38398518,
+          "fn": 1482,
+          "tpr": 0.0,
+          "fpr": 0.0
+        },
+        "10.0": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 38398518,
+          "fn": 1482,
+          "tpr": 0.0,
+          "fpr": 0.0
+        }
+      }
+    },
+    "cnn_leaky_50epochs_01": {
+      "threshold": 6.809140682220459,
+      "pooled": {
+        "tp": 272,
+        "fp": 954,
+        "tn": 115194600,
+        "fn": 4174,
+        "tpr": 0.06117858749437697,
+        "fpr": 8.281569616827399e-06
+      },
+      "by_snr": {
+        "0.0": {
+          "tp": 28,
+          "fp": 40,
+          "tn": 38398478,
+          "fn": 1454,
+          "tpr": 0.018893387314439947,
+          "fpr": 1.0417068700411824e-06
+        },
+        "5.0": {
+          "tp": 76,
+          "fp": 215,
+          "tn": 38398303,
+          "fn": 1406,
+          "tpr": 0.05128205128205128,
+          "fpr": 5.599174426471355e-06
+        },
+        "10.0": {
+          "tp": 168,
+          "fp": 699,
+          "tn": 38397819,
+          "fn": 1314,
+          "tpr": 0.11336032388663968,
+          "fpr": 1.8203827553969662e-05
+        }
+      }
+    },
+    "snn_rate_50epochs_01": {
+      "threshold": 3.8061423301696777,
+      "pooled": {
+        "tp": 457,
+        "fp": 1042,
+        "tn": 115194512,
+        "fn": 3989,
+        "tpr": 0.10278902384165542,
+        "fpr": 9.045487988190933e-06
+      },
+      "by_snr": {
+        "0.0": {
+          "tp": 64,
+          "fp": 112,
+          "tn": 38398406,
+          "fn": 1418,
+          "tpr": 0.043184885290148446,
+          "fpr": 2.9167792361153106e-06
+        },
+        "5.0": {
+          "tp": 141,
+          "fp": 272,
+          "tn": 38398246,
+          "fn": 1341,
+          "tpr": 0.0951417004048583,
+          "fpr": 7.08360671628004e-06
+        },
+        "10.0": {
+          "tp": 252,
+          "fp": 658,
+          "tn": 38397860,
+          "fn": 1230,
+          "tpr": 0.1700404858299595,
+          "fpr": 1.713607801217745e-05
+        }
+      }
+    },
+    "snn_latency_50epochs_01": {
+      "threshold": 4.975198745727539,
+      "pooled": {
+        "tp": 760,
+        "fp": 1059,
+        "tn": 115194495,
+        "fn": 3686,
+        "tpr": 0.17094017094017094,
+        "fpr": 9.193063128113434e-06
+      },
+      "by_snr": {
+        "0.0": {
+          "tp": 133,
+          "fp": 108,
+          "tn": 38398410,
+          "fn": 1349,
+          "tpr": 0.08974358974358974,
+          "fpr": 2.812608549111192e-06
+        },
+        "5.0": {
+          "tp": 239,
+          "fp": 269,
+          "tn": 38398249,
+          "fn": 1243,
+          "tpr": 0.1612685560053981,
+          "fpr": 7.005478701026951e-06
+        },
+        "10.0": {
+          "tp": 388,
+          "fp": 682,
+          "tn": 38397836,
+          "fn": 1094,
+          "tpr": 0.26180836707152494,
+          "fpr": 1.776110213420216e-05
+        }
+      }
+    }
+  },
+  "encoding_seeds": {
+    "primary_seed": 13042,
+    "seeds": [
+      {
+        "seed": 13042,
+        "tp": 457,
+        "fp": 1042,
+        "tn": 115194512,
+        "fn": 3989,
+        "tpr": 0.10278902384165542,
+        "fpr": 9.045487988190933e-06
+      },
+      {
+        "seed": 13043,
+        "tp": 475,
+        "fp": 1051,
+        "tn": 115194503,
+        "fn": 3971,
+        "tpr": 0.10683760683760683,
+        "fpr": 9.123616003444021e-06
+      },
+      {
+        "seed": 13044,
+        "tp": 470,
+        "fp": 1037,
+        "tn": 115194517,
+        "fn": 3976,
+        "tpr": 0.10571300044984255,
+        "fpr": 9.00208353527255e-06
+      }
+    ],
+    "recall_min_percent": 10.278902384165542,
+    "recall_max_percent": 10.683760683760683,
+    "recall_range_percentage_points": 0.40485829959514064,
+    "scope": "Descriptive encoding-seed sensitivity on the same test scenes; not training-seed robustness or a confidence interval"
+  },
+  "clutter_strata": {
+    "scope": "Descriptive cached-test strata; no threshold/model selection. Exact cell overlap is not physical resolvability.",
+    "zero_doppler_row": 64,
+    "models": {
+      "cnn_baseline_50epochs_01": {
+        "positive_strata": {
+          "exact_clutter_overlap": {
+            "tp": 0,
+            "fn": 3,
+            "positive_cells": 3,
+            "recall": 0.0
+          },
+          "zero_row_no_exact_overlap": {
+            "tp": 0,
+            "fn": 84,
+            "positive_cells": 84,
+            "recall": 0.0
+          },
+          "off_zero_row": {
+            "tp": 0,
+            "fn": 4359,
+            "positive_cells": 4359,
+            "recall": 0.0
+          }
+        },
+        "background_strata": {
+          "zero_row": {
+            "fp": 0,
+            "tn": 899913,
+            "negative_cells": 899913,
+            "fpr": 0.0
+          },
+          "other_rows": {
+            "fp": 0,
+            "tn": 114295641,
+            "negative_cells": 114295641,
+            "fpr": 0.0
+          }
+        }
+      },
+      "cnn_leaky_50epochs_01": {
+        "positive_strata": {
+          "exact_clutter_overlap": {
+            "tp": 0,
+            "fn": 3,
+            "positive_cells": 3,
+            "recall": 0.0
+          },
+          "zero_row_no_exact_overlap": {
+            "tp": 6,
+            "fn": 78,
+            "positive_cells": 84,
+            "recall": 0.07142857142857142
+          },
+          "off_zero_row": {
+            "tp": 266,
+            "fn": 4093,
+            "positive_cells": 4359,
+            "recall": 0.061023170451938516
+          }
+        },
+        "background_strata": {
+          "zero_row": {
+            "fp": 29,
+            "tn": 899884,
+            "negative_cells": 899913,
+            "fpr": 3.222533733816491e-05
+          },
+          "other_rows": {
+            "fp": 925,
+            "tn": 114294716,
+            "negative_cells": 114295641,
+            "fpr": 8.093047048049715e-06
+          }
+        }
+      },
+      "snn_rate_50epochs_01": {
+        "positive_strata": {
+          "exact_clutter_overlap": {
+            "tp": 0,
+            "fn": 3,
+            "positive_cells": 3,
+            "recall": 0.0
+          },
+          "zero_row_no_exact_overlap": {
+            "tp": 13,
+            "fn": 71,
+            "positive_cells": 84,
+            "recall": 0.15476190476190477
+          },
+          "off_zero_row": {
+            "tp": 444,
+            "fn": 3915,
+            "positive_cells": 4359,
+            "recall": 0.1018582243633861
+          }
+        },
+        "background_strata": {
+          "zero_row": {
+            "fp": 46,
+            "tn": 899867,
+            "negative_cells": 899913,
+            "fpr": 5.1116052329502964e-05
+          },
+          "other_rows": {
+            "fp": 996,
+            "tn": 114294645,
+            "negative_cells": 114295641,
+            "fpr": 8.714243091737856e-06
+          }
+        }
+      },
+      "snn_latency_50epochs_01": {
+        "positive_strata": {
+          "exact_clutter_overlap": {
+            "tp": 0,
+            "fn": 3,
+            "positive_cells": 3,
+            "recall": 0.0
+          },
+          "zero_row_no_exact_overlap": {
+            "tp": 13,
+            "fn": 71,
+            "positive_cells": 84,
+            "recall": 0.15476190476190477
+          },
+          "off_zero_row": {
+            "tp": 747,
+            "fn": 3612,
+            "positive_cells": 4359,
+            "recall": 0.17136958017894013
+          }
+        },
+        "background_strata": {
+          "zero_row": {
+            "fp": 86,
+            "tn": 899827,
+            "negative_cells": 899913,
+            "fpr": 9.55647934855925e-05
+          },
+          "other_rows": {
+            "fp": 973,
+            "tn": 114294668,
+            "negative_cells": 114295641,
+            "fpr": 8.513010570543106e-06
+          }
+        }
+      }
+    },
+    "limitations": [
+      "Three SNR variants share each base scene; counts are not independent trials.",
+      "Exact overlap test stratum may contain only one base scene; do not generalize.",
+      "Background here means negative cells in target-containing maps, not background-only scenes."
+    ]
+  },
+  "background": {
+    "cnn_baseline_50epochs_01": {
+      "threshold": 4.68595027923584,
+      "pooled": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 61440000,
+        "fn": 0,
+        "tpr": null,
+        "fpr": 0.0
+      },
+      "by_condition": {
+        "noise_only": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 30720000,
+          "fn": 0,
+          "tpr": null,
+          "fpr": 0.0
+        },
+        "clutter_noise": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 30720000,
+          "fn": 0,
+          "tpr": null,
+          "fpr": 0.0
+        }
+      },
+      "by_condition_reference": {
+        "noise_only": {
+          "0.0": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 10240000,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 0.0
+          },
+          "5.0": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 10240000,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 0.0
+          },
+          "10.0": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 10240000,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 0.0
+          }
+        },
+        "clutter_noise": {
+          "0.0": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 10240000,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 0.0
+          },
+          "5.0": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 10240000,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 0.0
+          },
+          "10.0": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 10240000,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 0.0
+          }
+        }
+      },
+      "limitations": "200 base backgrounds, paired conditions/reference variants; noise-only normalized inputs duplicate across reference levels. No independent-trial CI."
+    },
+    "cnn_leaky_50epochs_01": {
+      "threshold": 6.809140682220459,
+      "pooled": {
+        "tp": 0,
+        "fp": 0,
+        "tn": 61440000,
+        "fn": 0,
+        "tpr": null,
+        "fpr": 0.0
+      },
+      "by_condition": {
+        "noise_only": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 30720000,
+          "fn": 0,
+          "tpr": null,
+          "fpr": 0.0
+        },
+        "clutter_noise": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 30720000,
+          "fn": 0,
+          "tpr": null,
+          "fpr": 0.0
+        }
+      },
+      "by_condition_reference": {
+        "noise_only": {
+          "0.0": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 10240000,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 0.0
+          },
+          "5.0": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 10240000,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 0.0
+          },
+          "10.0": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 10240000,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 0.0
+          }
+        },
+        "clutter_noise": {
+          "0.0": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 10240000,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 0.0
+          },
+          "5.0": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 10240000,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 0.0
+          },
+          "10.0": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 10240000,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 0.0
+          }
+        }
+      },
+      "limitations": "200 base backgrounds, paired conditions/reference variants; noise-only normalized inputs duplicate across reference levels. No independent-trial CI."
+    },
+    "snn_rate_50epochs_01": {
+      "threshold": 3.8061423301696777,
+      "pooled": {
+        "tp": 0,
+        "fp": 52,
+        "tn": 61439948,
+        "fn": 0,
+        "tpr": null,
+        "fpr": 8.463541666666666e-07
+      },
+      "by_condition": {
+        "noise_only": {
+          "tp": 0,
+          "fp": 24,
+          "tn": 30719976,
+          "fn": 0,
+          "tpr": null,
+          "fpr": 7.8125e-07
+        },
+        "clutter_noise": {
+          "tp": 0,
+          "fp": 28,
+          "tn": 30719972,
+          "fn": 0,
+          "tpr": null,
+          "fpr": 9.114583333333333e-07
+        }
+      },
+      "by_condition_reference": {
+        "noise_only": {
+          "0.0": {
+            "tp": 0,
+            "fp": 9,
+            "tn": 10239991,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 8.7890625e-07
+          },
+          "5.0": {
+            "tp": 0,
+            "fp": 8,
+            "tn": 10239992,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 7.8125e-07
+          },
+          "10.0": {
+            "tp": 0,
+            "fp": 7,
+            "tn": 10239993,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 6.8359375e-07
+          }
+        },
+        "clutter_noise": {
+          "0.0": {
+            "tp": 0,
+            "fp": 11,
+            "tn": 10239989,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 1.07421875e-06
+          },
+          "5.0": {
+            "tp": 0,
+            "fp": 5,
+            "tn": 10239995,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 4.8828125e-07
+          },
+          "10.0": {
+            "tp": 0,
+            "fp": 12,
+            "tn": 10239988,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 1.171875e-06
+          }
+        }
+      },
+      "limitations": "200 base backgrounds, paired conditions/reference variants; noise-only normalized inputs duplicate across reference levels. No independent-trial CI."
+    },
+    "snn_latency_50epochs_01": {
+      "threshold": 4.975198745727539,
+      "pooled": {
+        "tp": 0,
+        "fp": 9,
+        "tn": 61439991,
+        "fn": 0,
+        "tpr": null,
+        "fpr": 1.46484375e-07
+      },
+      "by_condition": {
+        "noise_only": {
+          "tp": 0,
+          "fp": 0,
+          "tn": 30720000,
+          "fn": 0,
+          "tpr": null,
+          "fpr": 0.0
+        },
+        "clutter_noise": {
+          "tp": 0,
+          "fp": 9,
+          "tn": 30719991,
+          "fn": 0,
+          "tpr": null,
+          "fpr": 2.9296875e-07
+        }
+      },
+      "by_condition_reference": {
+        "noise_only": {
+          "0.0": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 10240000,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 0.0
+          },
+          "5.0": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 10240000,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 0.0
+          },
+          "10.0": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 10240000,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 0.0
+          }
+        },
+        "clutter_noise": {
+          "0.0": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 10240000,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 0.0
+          },
+          "5.0": {
+            "tp": 0,
+            "fp": 0,
+            "tn": 10240000,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 0.0
+          },
+          "10.0": {
+            "tp": 0,
+            "fp": 9,
+            "tn": 10239991,
+            "fn": 0,
+            "tpr": null,
+            "fpr": 8.7890625e-07
+          }
+        }
+      },
+      "limitations": "200 base backgrounds, paired conditions/reference variants; noise-only normalized inputs duplicate across reference levels. No independent-trial CI."
+    }
+  },
+  "activity_energy": {
+    "samples": 2250,
+    "split": "test",
+    "results": {
+      "snn_rate_50epochs_01": {
+        "layers": {
+          "conv1": {
+            "input_events": 646646429,
+            "event_additions": 46238857792,
+            "dense_macs": 131799168000
+          },
+          "conv2": {
+            "input_events": 2890876177,
+            "event_additions": 206797702648,
+            "dense_macs": 1054393344000
+          },
+          "readout": {
+            "input_events": 7775360192,
+            "event_additions": 7775360192,
+            "dense_macs": 14745600000
+          }
+        },
+        "neuron_updates": 29491200000,
+        "event_additions": 260811920632,
+        "dense_macs": 1200938112000,
+        "event_fraction_of_dense": 0.2171734896460676,
+        "ideal_event_energy_pj": 234730728568.80002,
+        "dense_emulation_energy_pj": 5524315315200.001,
+        "max_abs_logit_diff_vs_frozen_test": 0.0,
+        "ideal_event_energy_uj_per_map": 104.3247682528,
+        "dense_emulation_energy_uj_per_map": 2455.2512512000003
+      },
+      "snn_latency_50epochs_01": {
+        "layers": {
+          "conv1": {
+            "input_events": 113915971,
+            "event_additions": 8145628872,
+            "dense_macs": 131799168000
+          },
+          "conv2": {
+            "input_events": 2673676737,
+            "event_additions": 191354704416,
+            "dense_macs": 1054393344000
+          },
+          "readout": {
+            "input_events": 10440101406,
+            "event_additions": 10440101406,
+            "dense_macs": 14745600000
+          }
+        },
+        "neuron_updates": 29491200000,
+        "event_additions": 209940434694,
+        "dense_macs": 1200938112000,
+        "event_fraction_of_dense": 0.17481369988697637,
+        "ideal_event_energy_pj": 188946391224.6,
+        "dense_emulation_energy_pj": 5524315315200.001,
+        "max_abs_logit_diff_vs_frozen_test": 0.0,
+        "ideal_event_energy_uj_per_map": 83.97617387759999,
+        "dense_emulation_energy_uj_per_map": 2455.2512512000003
+      },
+      "cnn_baseline_50epochs_01": {
+        "layers": {
+          "conv1": {
+            "dense_macs": 8237448000
+          },
+          "conv2": {
+            "dense_macs": 65899584000
+          },
+          "readout": {
+            "dense_macs": 921600000
+          }
+        },
+        "dense_macs": 75058632000,
+        "dense_energy_pj": 345269707200.00006,
+        "dense_energy_uj_per_map": 153.45320320000002
+      },
+      "cnn_leaky_50epochs_01": {
+        "layers": {
+          "conv1": {
+            "dense_macs": 8237448000
+          },
+          "conv2": {
+            "dense_macs": 65899584000
+          },
+          "readout": {
+            "dense_macs": 921600000
+          }
+        },
+        "dense_macs": 75058632000,
+        "dense_energy_pj": 345269707200.00006,
+        "dense_energy_uj_per_map": 153.45320320000002
+      }
+    }
+  }
+}
