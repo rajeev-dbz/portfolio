@@ -1,0 +1,8 @@
+metric,value,unit,scope
+campaign_trials,1000,count,synthetic campaign
+campaign_matches,759,count,synthetic campaign
+campaign_misses,241,count,synthetic campaign
+range_bin_spacing,0.150,m,FFT grid not hardware accuracy
+grr_study_variation,10.7202,percent,standalone synthetic MSA
+sensor_difference_rmse_before,0.118213,m,standalone synthetic validation
+sensor_difference_rmse_after,0.014346,m,standalone synthetic validation
