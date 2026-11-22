@@ -24,6 +24,6 @@
   }));
   if(new Set(projects.map(p=>p.id)).size!==projects.length)throw new Error('duplicate project');
   window.PORTFOLIO_SELECTION={label:projects.length===1?projects[0].title:'Engineering Projects',projects};
-  const script=document.createElement('script');script.src='./assets/portfolio.js?v=profile-1';script.onerror=()=>fail('Unable to load this portfolio. Please refresh.');document.body.appendChild(script);
+  const script=document.createElement('script');script.src='./assets/portfolio.js?v=20261122-tool-grid';script.onerror=()=>fail('Unable to load this portfolio. Please refresh.');document.body.appendChild(script);
  }catch{fail('One or more selected projects are unavailable. Please check the link or ask for an updated selection.');}
 })();

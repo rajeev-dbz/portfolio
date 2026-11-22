@@ -1,0 +1,4 @@
+case,model,U_in_m_s,mass_flow_kg_s,volume_flow_m3_s,pressure_drop_Pa,device_max_C,heatsink_max_C,air_min_C,heat_input_W,outlet_enthalpy_W,balance_error_pct,divergence_term_W,flow_log,heat_log,flow_status
+HT-2,step4m_laminar_ht.mph,1,0.024352,0.0216,0.49346,201.59,195.6,34.491,322.33,419.47,30.1368,171.34,solver_log_10.txt,solver_log_17.txt,FLOW-6 converged (ResEst 3.3e-4)
+HT-3,step4n_flow_sensitivity.mph,2,0.048704,0.0404418,1.6032,152.75,146.34,37.448,322.33,432.42,34.1544,193.03,solver_log_18.txt,solver_log_19.txt,FLOW-9 converged (ResEst 1.9e-4); density at 20 C
+HT-4,step4o_flow_3ms.mph,3,0.073056,0.0606626,3.3984,129.48,123.12,38.888,322.33,445.98,38.3613,213.84,solver_log_20.txt,solver_log_21.txt,"FLOW-10 60 it, ResEst 0.014; density at 20 C"
